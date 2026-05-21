@@ -43,6 +43,7 @@ function CreateTaskDialog({ users, open, onClose, onCreate }: any) {
 
         <TextField
           label="Title"
+          name="title"
           fullWidth
           margin="normal"
           value={title}
@@ -51,6 +52,7 @@ function CreateTaskDialog({ users, open, onClose, onCreate }: any) {
 
         <TextField
           label="Description"
+          name="description"
           fullWidth
           margin="normal"
           value={description}

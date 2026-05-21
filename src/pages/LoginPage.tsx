@@ -40,6 +40,7 @@ function LoginPage() {
 
           <TextField
             label="Email"
+            name="email"
             size="small"
             fullWidth
             margin="normal"
@@ -50,6 +51,7 @@ function LoginPage() {
 
           <TextField
             label="Password"
+            name="password"
             type="password"
             size="small"
             fullWidth

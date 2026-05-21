@@ -14,16 +14,16 @@ export const AuthProvider = ({ children }: any) => {
 
   const [user, setUser] = useState(null)
 
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("authToken")
 
   const login = async (token: string) => {
-    localStorage.setItem("token", token)
+    localStorage.setItem("authToken", token)
     console.log("user:", user)
     await fetchUser()
   }
 
   const logout = () => {
-    localStorage.removeItem("token")
+    localStorage.removeItem("authToken")
     setUser(null)
   }
 

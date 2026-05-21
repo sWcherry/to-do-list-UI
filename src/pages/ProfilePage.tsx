@@ -15,6 +15,7 @@ function ProfilePage() {
   const [confirmDelete, setConfirmDelete] = useState(false)
   const [snackbar, setSnackbar] = useState({ open: false, message: "" })
   const onLogout = useAuth().logout // ?
+  //const { isAuthenticated, logout } = useAuth()
   const genderLabels: Record<string, string> = {
     M: "Male",
     F: "Female",
@@ -42,7 +43,7 @@ function ProfilePage() {
   }
 
   const handleLogout = async () => {
-    await logout
+    await logout()
     onLogout()
   }
 
@@ -50,6 +51,7 @@ function ProfilePage() {
     await deleteProfile()
     setConfirmDelete(false)
     onLogout() 
+    //await logout()
   }
 
   if (loading) return <CircularProgress />
